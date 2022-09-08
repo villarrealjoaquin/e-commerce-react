@@ -1,0 +1,38 @@
+header{
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+h2{
+    color: white;
+}
+
+h2:hover{
+    color: rgb(48, 199, 254);
+}
+
+.inicio{
+    margin: 30px;
+}
+
+img{
+    width: 10%;
+}
+
+.a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+.a:hover{
+    background-color: rgb(48, 199, 254);
+}
+
+.cart{
+    margin: 50px;
+} 
