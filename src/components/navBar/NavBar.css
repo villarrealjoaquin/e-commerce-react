@@ -5,9 +5,12 @@ header{
     align-content: center;
     align-items: center;
 }
+.h2{
+    color: white;
+}
 
 h2{
-    color: white;
+    color: black;
 }
 
 h2:hover{
@@ -36,3 +39,68 @@ img{
 .cart{
     margin: 50px;
 } 
+
+.h1b{
+    display: flex;
+    justify-content: center;
+}
+
+/* .linea{
+    display: inline;
+} */
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: gray;
+    height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 20px;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+.btn-color{
+    background-color: rgb(101, 96, 96);
+}
+
+.btn-color:hover{
+    background-color: rgb(80, 78, 78);
+}
+.btn-carrito{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cart{
+    height: 65px;
+    width: 35%;
+    background-color: rgb(157, 154, 154);
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.btn-cart:hover{
+    background-color: rgb(142, 140, 140);
+}
+

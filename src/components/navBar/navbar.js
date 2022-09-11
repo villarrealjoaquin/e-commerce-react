@@ -6,7 +6,7 @@ import "./NavBar.css"
     return ( 
         <header>
             <img src= {logo} alt="logo" />
-            <h2>React App</h2>
+            <h2 className="h2">React App</h2>
             <nav>
             <a href="#" className="a">Inicio</a>
             <a href="#" className="a">Sobre nosotros</a>
@@ -20,5 +20,5 @@ import "./NavBar.css"
 }
 
 export default NavBar
-
+ 
 
