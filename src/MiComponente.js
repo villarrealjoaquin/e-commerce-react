@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const MiComponente = () => {
+const MiComponente = (alternar) => {
     const [contador, setContador] = useState(1); 
 
     const Sumar = () => {
@@ -25,6 +25,7 @@ const MiComponente = () => {
          <button onClick={Sumar}>Sumar</button>
          <button onClick={Restar}>Restar</button>
          <button onClick={reset}>Reset</button>
+         <button onClick={alternar}>alternar</button>
         </>
     )
 }

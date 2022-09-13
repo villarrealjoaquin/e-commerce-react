@@ -3,6 +3,7 @@ import ItemListContainer from "./Containers/ItemListContainer/ItemListContainer.
 import MiComponente from "./MiComponente"
 import Usuarios from "./Usuarios.js"
 import ItemCount from "./ItemCount/ItemCount"
+import { useState } from "react"
 
 const App = () => {
   
@@ -10,8 +11,6 @@ const App = () => {
     <>
     <NavBar />
     <ItemListContainer greeting={"Bienvenido a mi App"}/>
-    {/* <MiComponente /> */}
-    {/* <Usuarios /> */}
     </>
   )
 }
