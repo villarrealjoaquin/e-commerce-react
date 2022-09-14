@@ -1,0 +1,46 @@
+.product-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.container-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 30% ;
+}
+
+
+.img-product{
+    width: 50%;
+    border: 1px solid black;
+    height: auto;
+    background-color:#273E5B;
+}
+
+.price{
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: "Droid Sans",Sans-serif;
+    color: black;
+}
+
+.name-product{
+    color: black;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    font-family: "Droid Sans",Sans-serif;
+}
+
+.btn-product{
+    margin-top: 10px;
+    background-color: rgb(99, 198, 243);
+    border: 1px solid;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+}
