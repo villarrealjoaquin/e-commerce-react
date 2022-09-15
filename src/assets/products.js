@@ -7,6 +7,7 @@ import mob from "../assets/img/mobpsyco.jpg"
 export const products = [{id:1, image: chain , nombre: "Chainsaw Man", precio:750},
                         {id:2, image: demonslayer, nombre: "Chainsaw Man", precio:800},
                         {id:3, image: tokyorevenger, nombre: "Chainsaw Man", precio:1100},
-                        {id:4, image: mob, nombre: "Chainsaw Man", precio:1000},]
+                        {id:4, image: mob, nombre: "Chainsaw Man", precio:1000},
+                        ]
 
 

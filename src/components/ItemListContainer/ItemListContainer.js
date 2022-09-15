@@ -3,27 +3,38 @@ import ItemCount from "../ItemCount/ItemCount"
 import { ItemList } from "../ItemList"
 import { products } from "../../assets/products"
 import { customFetch } from "../../utils/customFetch"
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ItemListContainer = ({greeting}) => {
 
     const [listProduct, setListProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(()=> {
         customFetch(products)
-            .then(res => setListProducts(res))
+            .then(res => {
+                setLoading(false)
+                setListProducts(res)
+            })
+
     }, [])
 
-    const onAdd = () => {
-        alert(`Se agregaron correctamente los productos a tu carrito `)
-    } 
+        // const onAdd = () => {
+        //     alert(`Se agregaron correctamente los productos a tu carrito `)
+        // } 
 
     return (
         <>
             <h1 className="h1b">{greeting}</h1>
+            {loading ? 
+                <ClipLoader /> 
+                :
+                <ItemList listProduct={listProduct}/>
+            }
             {/* <ItemCount inicio = {1} stock={5} onAdd={onAdd}/> */}
-            <ItemList listProduct={listProduct}/>
+            
         </>
     )
 }
 
-export default ItemListContainer
+    export default ItemListContainer

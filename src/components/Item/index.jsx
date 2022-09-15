@@ -1,5 +1,6 @@
 import "./Item.css"
 const Item = ({product}) => {
+
     return(
         <div className="product-container">
             <div className="container-shop">
