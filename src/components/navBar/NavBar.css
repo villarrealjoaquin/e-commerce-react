@@ -8,6 +8,12 @@ header{
 
 .h2{
     color: white;
+   
+}
+
+.link-h2{
+    text-decoration: none;
+    display: flex;
 }
 
 h2{

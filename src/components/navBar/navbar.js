@@ -1,20 +1,25 @@
 import logo from "../../assets/react-logo.png"
 import CartWidget from "../cartWidget/CarWidget"
 import "./NavBar.css"
+import { Link, NavLink } from 'react-router-dom'
 
   const NavBar = () => {
     return ( 
         <header>
-            <img src= {logo} alt="logo" />
-            <h2 className="h2">React App</h2>
+            <Link to='/' className="link-h2">
+                <img  src= {logo} alt="logo" />
+                <h2 className="h2">Manga Shop</h2>
+            </Link>
             <nav>
-            <a href="#" className="a">Inicio</a>
-            <a href="#" className="a">Sobre nosotros</a>
-            <a href="#" className="a">Servicio</a>
-            <a href="#" className="a">Novedades</a>
-            <a href="#" className="a">Contacto</a>
+                <NavLink to="/" className="a">Inicio</NavLink>
+                <NavLink to="/categoria/shonen" className="a">shonen</NavLink>
+                <NavLink to="/categoria/seinen" className="a">seinen</NavLink>
+                <NavLink to="/categoria/isekai" className="a">isekai</NavLink>
+                <NavLink to="/categoria/contacto" className="a">contacto</NavLink>
             </nav>
-            <CartWidget />
+            <Link to = "/cart">
+                <CartWidget />
+            </Link>
         </header>
     )
 }

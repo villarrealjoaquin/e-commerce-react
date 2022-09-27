@@ -10,13 +10,13 @@ const ItemCount = ({inicio, stock, onAdd}) => {
         <>
         <div className="container">
         <div className="main-container">
-          <a href="#" className="btn btn-color" onClick={suma}>+</a>
+          <button href="#" className="btn btn-color" onClick={suma}>+</button>
           <h2 className="linea">{cantidad}</h2>
-          <a href="#"  className="btn btn-color" onClick={resta} >-</a>
+          <button href="#"  className="btn btn-color" onClick={resta} >-</button>
         </div>
         </div>
         <div className="btn-carrito">
-          <a href="#" className="btn-cart" onClick={onAdd}>Add to Cart</a>
+          <button href="#" className="btn-cart" onClick={onAdd}>Add to Cart</button>
         </div> 
         </>  
     )

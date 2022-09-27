@@ -1,5 +1,4 @@
 import React from "react";
-import { Item } from "../Item";
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
@@ -8,7 +7,7 @@ const ItemDetail = ({item}) => {
     const onAdd = () => {
         alert(`Se agregaron correctamente los productos a tu carrito `)
     } 
-
+// console.log(item);
     return(
         <>
         <section className="contenedor-view">
@@ -19,7 +18,7 @@ const ItemDetail = ({item}) => {
                     <img src={item.image} alt=""/>
                 </div>
                 <div className="product-view">
-                        <h3>{item.title}</h3>
+                        <h3>{item.nombre}</h3>
                         <p>{item.description}</p>
                         <ItemCount inicio = {1} stock={5} onAdd={onAdd}/>  
                 </div>
