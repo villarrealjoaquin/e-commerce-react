@@ -9,11 +9,11 @@ const ItemCount = ({inicio, stock, onAdd}) => {
     return(
         <>
         <div className="container">
-        <div className="main-container">
-          <button href="#" className="btn btn-color" onClick={suma}>+</button>
-          <h2 className="linea">{cantidad}</h2>
-          <button href="#"  className="btn btn-color" onClick={resta} >-</button>
-        </div>
+          <div className="main-container">
+            <button href="#" className="btn btn-color" onClick={suma}>+</button>
+            <h2 className="linea">{cantidad}</h2>
+            <button href="#"  className="btn btn-color" onClick={resta} >-</button>
+          </div>
         </div>
         <div className="btn-carrito">
           <button href="#" className="btn-cart" onClick={onAdd}>Add to Cart</button>

@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
 
+    const [goCart, setGoCart] = useState(false)
+    
     const onAdd = () => {
-        alert(`Se agregaron correctamente los productos a tu carrito `)
+        setGoCart(true)
     } 
 // console.log(item);
     return(
@@ -20,7 +23,12 @@ const ItemDetail = ({item}) => {
                 <div className="product-view">
                         <h3>{item.nombre}</h3>
                         <p>{item.description}</p>
-                        <ItemCount inicio = {1} stock={5} onAdd={onAdd}/>  
+                        {goCart 
+                        ? <button className="btn-finalizar">
+                            <Link to ='/cart' className="Link-finalizar">Finalizar compra</Link> 
+                        </button> 
+                        : <ItemCount inicio = {1} stock={5} onAdd={onAdd}/> 
+                        } 
                 </div>
                 </section>
             </div>

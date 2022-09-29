@@ -3,6 +3,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { ItemDetailContainer } from "./components/ItemDetailContainer/index.jsx"
 import { Cart } from "./CartView/Cart"
 import { BrowserRouter, Routes,Route, } from "react-router-dom";
+import { ComponenteEventos } from '../src/ComponenteEventos'
+import { Users } from "./Users.jsx";
 
 const App = () => {
   
@@ -17,7 +19,8 @@ const App = () => {
           <Route path="/cart" element={<Cart />}/>
         </Routes> 
       </BrowserRouter>
-      {/* <ItemDetailContainer /> */}
+      {/* <ComponenteEventos /> */}
+      {/* <Users /> */}
     </>
   )
 }
