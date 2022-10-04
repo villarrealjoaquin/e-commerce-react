@@ -19,6 +19,7 @@
 .view-image img{
     width: 400px;
     padding: 30px;
+    object-fit: contain;
 }
 
 .title-view{

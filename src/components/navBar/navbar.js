@@ -18,7 +18,7 @@ import { Link, NavLink } from 'react-router-dom'
                 <NavLink to="/categoria/contacto" className="a">contacto</NavLink>
             </nav>
             <Link to = "/cart">
-                <CartWidget />
+                <CartWidget />           
             </Link>
         </header>
     )
