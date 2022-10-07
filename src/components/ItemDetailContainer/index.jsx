@@ -20,27 +20,14 @@ const ItemDetailContainer = () => {
             setProducto(res)} )
     }, [id])
     
-    // const getItem = async () => {
-        //     try{
-            //         const respuesta = await fetch('https://fakestoreapi.com/products/2');
-            //         const data = await respuesta.json();
-            //         setProducto(data);
-            //     }
-            //     catch(err){
-                //         console.error(err);
-                //     }
-                // }
-                
-                // getItem(); 
-    
    return (
     <>
         {loading?
-            <div className="spinner">
+        <div className="spinner">
             <ClipLoader />  
-           </div> 
+        </div> 
            :
-            <ItemDetail item = {producto}/>} 
+        <ItemDetail item = {producto}/>} 
     </>
    )
 }

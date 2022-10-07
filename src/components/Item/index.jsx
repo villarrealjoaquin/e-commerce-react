@@ -9,7 +9,7 @@ const Item = ({product}) => {
                 <img className="img-product" src={product.image} alt="" />
                 <h2 className="name-product">{product.nombre}</h2>
                 <div className="price">{product.precio}</div>
-                <button className="btn-product">Add to Cart</button>
+                <button className="btn-product">Detalles</button>
             </div>
         </div>
         </Link>

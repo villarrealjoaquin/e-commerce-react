@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom'
     return ( 
         <header>
             <Link to='/' className="link-h2">
-                <img  src= {logo} alt="logo" />
+                <img src= {logo} alt="logo" />
                 <h2 className="h2">Manga Shop</h2>
             </Link>
             <nav>

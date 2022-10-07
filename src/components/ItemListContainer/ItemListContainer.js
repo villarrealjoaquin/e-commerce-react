@@ -27,13 +27,15 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-            <h1 className="h1b">{greeting}</h1>
             {loading ? 
                <div className="spinner">
                 <ClipLoader />  
-               </div> 
-                :
-                <ItemList listProduct={listProduct}/> 
+               </div>            
+            :
+            <>
+            <h1 className="h1b">{greeting}</h1>        
+            <ItemList listProduct={listProduct}/> 
+            </>
             }
         </>
     )
