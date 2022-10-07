@@ -7,12 +7,12 @@ const CartWidget = () => {
    const {totalProducts} = useContext(cartContext);
 
     return (
-        <>
-            <div className='cart-count'>
-                <ShoppingCartIcon  className="cart" color="primary" fontSize="large" />
-                <span>{totalProducts() || ''}</span>
-            </div>
-        </>
+        
+        <div className='cart-count'>
+            <ShoppingCartIcon  className="cart" color="primary" fontSize="large" />
+            <span>{totalProducts() || ''}</span>
+        </div>
+        
     )
 }
 
