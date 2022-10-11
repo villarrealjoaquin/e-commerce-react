@@ -26,13 +26,13 @@ const ItemDetail = ({ item }) => {
                                 <img src={item.image} alt=""/>
                             </div>
                             <div className="product-view">
-                                <h3>{item.nombre}</h3>
+                                <h3>{item.name}</h3>
                                 <p>{item.description}</p>
-                                {goCart 
-                                ? <button className="btn-finalizar">
-                                <Link to ='/cart' className="Link-finalizar">Finalizar compra</Link> 
+                                {goCart ? 
+                                <button className="btn-finalizar">
+                                    <Link to ='/cart' className="Link-finalizar">Finalizar compra</Link> 
                                 </button> 
-                                : <ItemCount inicio = {1} stock={5} onAdd={onAdd}/> 
+                                : <ItemCount inicio = {1} stock={5} onAdd={onAdd} /> 
                                 } 
                             </div>
                         </div>
