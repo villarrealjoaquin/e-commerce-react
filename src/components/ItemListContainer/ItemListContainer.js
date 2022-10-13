@@ -4,7 +4,7 @@ import { ItemList } from "../ItemList";
 // import { customFetch } from "../../utils/customFetch";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useParams } from "react-router-dom";
-// import { db } from "../../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
  
 const ItemListContainer = ({greeting}) => {
@@ -21,12 +21,12 @@ const ItemListContainer = ({greeting}) => {
             setLoading(false);
             const queryFilter = query(queryCollection, where('category', '==', IdCategoria))
             getDocs(queryFilter)
-            .then(res => setListProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
+            .then(res => setListProducts(res.docs.map(product => ({id: product.id, ...product.data() }))));
         } else{
             getDocs(queryCollection)
             .then((res) => {
                 setLoading(false);
-                setListProducts(res.docs.map(product => ({id: product.id, ...product.data()})))})
+                setListProducts(res.docs.map(product => ({id: product.id, ...product.data()})))});
         }
     }, [IdCategoria]);
 
