@@ -1,0 +1,56 @@
+.cart-form-h1{
+    text-align: center;
+}
+
+.cart-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.cart-form input {
+    display: flex; 
+    margin-bottom: 1rem;
+    width: 40%;
+    height: 2rem;
+    border-radius: 0.25rem;
+}
+
+.cart-form button{
+    background-color: aqua;
+    height: 2rem;
+   display: flex;
+   width: 10%;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   border-radius: 1rem;
+   margin-top: 1rem;
+}
+
+.cart-form textarea{
+    width: 40%;
+    resize: none;
+    border-radius: 0.25rem;
+    font-family: sans-serif;
+    border: 1px solid black;
+    border-width: 2px;
+}
+
+.idUser{
+    margin-top: 12rem;
+    text-align: center;
+}
+
+.btn-user{
+    display: inline-block;
+    background-color: aqua;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    width: 10%;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,4 +1,4 @@
-.contenedor-view{
+/* .contenedor-view{
     margin: 10px;
 }
 
@@ -46,13 +46,13 @@
 
 .container{
     display: flex;
-    /* justify-content: center; */
+    /* justify-content: center; 
     text-align: center;
     margin-top: 90px;
   
-}
+} */
 
-.main-container{
+ /* .main-container{
     background-color: rgb(181, 177, 177);
     width: 400px;
     height: 20%;
@@ -66,7 +66,7 @@
 }
 .btn{
     width: 20%;
-    /* height: 50px; */
+    height: 50px;
     border-radius: 20px;
     color: black;
     text-decoration: none;
@@ -112,4 +112,69 @@
 
 .Link-finalizar{
     text-decoration: none;
+} */ 
+
+.data-description {
+    margin: 1rem;
+}
+.data-description ul{
+    display: flex;
+    justify-content: center;
+}
+.data-description ul :nth-child(4){
+    font-weight: bold;
+}
+
+.data-description{
+    text-decoration: none;
+}
+
+.ul-data-description li {
+    list-style: none;
+}
+.ul-data-description li::after{
+    content: ">";
+    margin: 10px;
+}
+
+.container-view-description{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+.view-description-left {
+    width: 50%;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.view-description-left img{
+    width: 100%;
+}
+
+.view-description-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.data-info{
+    width: 50%;
+    background-color: rgb(10, 201, 227);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.data-info-container{
+    color: white;
+    display: flex;
+    justify-content: center;
 }

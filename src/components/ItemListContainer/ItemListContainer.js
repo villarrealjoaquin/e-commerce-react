@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { ItemList } from "../ItemList";
-// import { products } from "../../assets/products";
-// import { customFetch } from "../../utils/customFetch";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useParams } from "react-router-dom";
-import { db } from "../../firebase/firebase";
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
  
 const ItemListContainer = ({greeting}) => {
@@ -35,7 +32,7 @@ const ItemListContainer = ({greeting}) => {
             {loading ? 
                <div className="spinner">
                 <ClipLoader />  
-               </div>            
+               </div>             
             :
             <>
               <h1 className="h1b">{greeting}</h1>        

@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import ItemDetail from "../ItemDetail/itemDetail"
 import { useParams } from "react-router-dom"
-import { products } from "../../assets/products"
-import { customFetch } from '../../utils/customFetch'
 import ClipLoader from "react-spinners/ClipLoader";
-// import { db } from "../../firebase/firebase";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -26,7 +23,7 @@ const ItemDetailContainer = () => {
     
    return (
     <>
-        {loading?
+        {loading ?
         <div className="spinner">
             <ClipLoader />  
         </div> 

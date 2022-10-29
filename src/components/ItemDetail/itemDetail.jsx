@@ -8,36 +8,42 @@ const ItemDetail = ({ item }) => {
   
     const [goCart, setGoCart] = useState(false);
     
-    const {cart, addProduct} = useContext(cartContext);
+    const { addProduct} = useContext(cartContext);
     
     const onAdd = (cantidad) => {
         addProduct(item, cantidad);
         setGoCart(true);
     }
     
-    console.log(cart);
     return(
         <>
-            <section className="contenedor-view">
-                <div className="title-view">Estas viendo el producto:</div>
-                    <div className="container-description">
-                        <div className="container-view">
-                            <div className="view-image">
-                                <img src={item.image} alt=""/>
-                            </div>
-                            <div className="product-view">
-                                <h3>{item.name}</h3>
-                                <p>{item.description}</p>
-                                {goCart ? 
-                                <button className="btn-finalizar">
-                                    <Link to ='/cart' className="Link-finalizar">Finalizar compra</Link> 
-                                </button> 
-                                : <ItemCount inicio = {1} stock={5} onAdd={onAdd} /> 
-                                } 
-                            </div>
-                        </div>
+            <div className="data-description">
+                <ul className="ul-data-description">
+                    <li><Link to = "/">inicio</Link></li>
+                    <li> <Link to = "/">Mangas</Link></li>
+                    <li>{item.category}</li>
+                    <li>{item.name}</li>
+                </ul>
+            </div>
+            <div className="data-info-container">
+                <div className="data-info">
+                    Estas viendo
                 </div>
-            </section>
+            </div>
+            <div className="container-view-description">
+                <div className="view-description-left">
+                    <img src={item.image} alt="imagen de producto" />
+                </div>
+                <div className="view-description-right">
+                    <h2 className="view-description-right-h2">{item.name}</h2>
+                    <p>{item.description}</p>
+                {goCart ? 
+                <button className="btn-finalizar">
+                    <Link to ='/cart' className="Link-finalizar">Finalizar compra</Link> 
+                </button> 
+                : <ItemCount inicio = {1} stock={item.stock} onAdd={onAdd} />} 
+                </div>
+            </div>
         </>
     )
 }

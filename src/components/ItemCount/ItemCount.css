@@ -1,0 +1,46 @@
+.container-btn{
+    display: flex;
+    justify-content: center;
+    /* background-color: cadetblue; */
+    width: 50%;
+    margin:1rem;
+}
+
+.main-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.main-btn-container button {
+    background-color: rgb(145, 143, 143);
+    width: 70px;
+    height: 40px;
+    border-radius: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.btn-cart{
+    background-color: rgb(164, 162, 162);
+    border-radius: 1rem;
+    width: 130px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+.btn-color-1:hover{
+    background-color: red;
+}
+
+.btn-color-2:hover{
+    background-color: rgb(5, 200, 5);
+}
+
+.btn-cart:hover{
+    background-color: rgb(173, 172, 172);
+}

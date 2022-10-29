@@ -13,7 +13,6 @@ export const customFetch = (products, id)=>{
             } catch (err){
                 reject(err)
             }
-            // resolve(products)
         }, 2000)
     })
 }

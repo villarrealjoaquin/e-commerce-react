@@ -2,48 +2,48 @@ import React, { useState } from 'react'
 import { createContext } from "react";
 
 export const cartContext = createContext();
- const CartProvider = ({children}) => {
+ const CartProvider = ({ children }) => {
+   
+   const [cart, setCart] = useState( [] );
+   
+   const inInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
-    const [cart, setCart] = useState([]);
-    
-    console.log(cart);
-    
-    const addProduct = (item, cantidad) => {
-      if(inInCart(item.id)){
+   const addProduct = (item, cantidad) => {
+     if(inInCart(item.id)){
         setCart(cart.map(product => {
           return product.id === item.id ? {...product, cantidad: product.cantidad + cantidad} : product;
         }))
       } else {
-        setCart([...cart, {item, cantidad}]);
+        setCart([...cart, {...item, cantidad}]);
       }
-      console.log(item.cantidad);
     }
 
-    const inInCart = (id) => cart.find(product => product.item.id === id) ? true : false;
+    const clearCart = () => setCart([])
 
-    const removeItem = (item) => {
-      const newCart = cart.filter(products => products.item !== item);
-      setCart([...newCart]);
-    }
-
-    const clearCart = () => setCart([]);
-
+    const removeItem = (id) => {
+      const arrayBorrado = cart.filter((item) => {
+          return item.id !== id
+      })
+      setCart(arrayBorrado)
+  }
+    
     const totalPrice = () => {
-      return cart.reduce((prev,act)=> prev + act.cantidad * act.item.price, 0);
+      return cart.reduce((prev, act)=> prev + act.cantidad * act.price, 0)
     }
 
     const totalProducts = () => cart.reduce((acumulador, productoActual)=> acumulador + productoActual.cantidad, 0); 
-
+ 
   return (
     <cartContext.Provider value={{
-      cart, 
       addProduct,
-      inInCart, 
       removeItem,
+      inInCart, 
       clearCart,
       totalPrice,
-      totalProducts}}
-      >{children}
+      totalProducts,
+      cart}}
+      >
+        {children}
       </cartContext.Provider>
   )
 }
